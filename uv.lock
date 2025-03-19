@@ -421,6 +421,8 @@ name = "dl-excercises"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "intel-extension-for-tensorflow", version = "1.0.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
+    { name = "intel-extension-for-tensorflow", version = "2.15.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9'" },
     { name = "ipykernel" },
     { name = "keras", version = "2.13.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
     { name = "keras", version = "2.15.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9'" },
@@ -439,6 +441,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "intel-extension-for-tensorflow", specifier = ">=1.0.0" },
     { name = "ipykernel", specifier = ">=6.29.5" },
     { name = "keras", specifier = ">=2.13.1" },
     { name = "matplotlib", specifier = ">=3.7.5" },
@@ -800,6 +803,45 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/cf/8c/f834fbf984f691b4f7ff60f50b514cc3de5cc08abfc3295564dd89c5e2e7/importlib_resources-6.5.2.tar.gz", hash = "sha256:185f87adef5bcc288449d98fb4fba07cea78bc036455dd44c5fc4a2fe78fed2c", size = 44693 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a4/ed/1f1afb2e9e7f38a545d628f864d562a5ae64fe6f7a10e28ffb9b185b4e89/importlib_resources-6.5.2-py3-none-any.whl", hash = "sha256:789cfdc3ed28c78b67a06acb8126751ced69a3d5f79c095a98298cd8a760ccec", size = 37461 },
+]
+
+[[package]]
+name = "intel-extension-for-tensorflow"
+version = "1.0.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version < '3.9'",
+]
+dependencies = [
+    { name = "grpcio", version = "1.70.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
+    { name = "tensorflow", version = "2.13.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
+    { name = "wheel", marker = "python_full_version < '3.9'" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5b/a2/d470c67adf359a88809113bd39cbda85d4eff44435a486ec0388a4e4d814/intel_extension_for_tensorflow-1.0.0-cp310-cp310-manylinux2014_x86_64.whl", hash = "sha256:5d38bd25ff7e77be5cb1d46404451553752b369e58d28a2205e083cb57341889", size = 121228 },
+    { url = "https://files.pythonhosted.org/packages/3e/39/1088c1490131d14a692d6009fa38c0fae42e4839e8298afe11d7a3b8f65a/intel_extension_for_tensorflow-1.0.0-cp38-cp38-manylinux2014_x86_64.whl", hash = "sha256:a4887e91a7b943b47e231452461f81095f3e0769f2b1a5e643dca6fc69a98b9a", size = 121232 },
+    { url = "https://files.pythonhosted.org/packages/f3/b0/f326b0707136485edaee78348e6ed8cbcda2721536272ef8db382aa8e721/intel_extension_for_tensorflow-1.0.0-cp39-cp39-manylinux2014_x86_64.whl", hash = "sha256:c970ce7c871715734e47b85c912b0a1d0d753f26f698035d3cf446059d1258a7", size = 121231 },
+]
+
+[[package]]
+name = "intel-extension-for-tensorflow"
+version = "2.15.0.3"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.11'",
+    "python_full_version == '3.10.*'",
+    "python_full_version == '3.9.*'",
+]
+dependencies = [
+    { name = "absl-py", version = "1.4.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9'" },
+    { name = "grpcio", version = "1.71.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9'" },
+    { name = "numpy", marker = "python_full_version >= '3.9'" },
+    { name = "protobuf", version = "4.23.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9'" },
+    { name = "tensorflow", version = "2.15.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9'" },
+    { name = "wheel", marker = "python_full_version >= '3.9'" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e2/26/ee94bdc6899bace64833c47ba6e0ca4fba4956407e55d4d8187759103574/intel_extension_for_tensorflow-2.15.0.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:689e2587b6510c0b36a319e6611f3290a99b3ba870480e48311a8f8b62fd217f", size = 176983 },
 ]
 
 [[package]]
